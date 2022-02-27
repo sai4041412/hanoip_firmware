@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>
-
-<permissions>
-    <!-- freeform window management for MotoDesktop. -->
-    <feature name="android.software.freeform_window_management" />
-</permissions>
-
