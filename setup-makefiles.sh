@@ -17,8 +17,8 @@
 
 set -e
 
-DEVICE=sake
-VENDOR=asus
+DEVICE=hanoip
+VENDOR=motorola
 INITIAL_COPYRIGHT_YEAR=2021
 
 # Load extract_utils and do some sanity checks
