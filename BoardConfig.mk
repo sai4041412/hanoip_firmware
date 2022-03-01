@@ -11,7 +11,7 @@
 #
 
 DEVICE_PATH := device/motorola/hanoip
-
+HANOIP_PREBUILT := device/motorola/hanoip-prebuilt
 # Inherit from the proprietary version
 -include vendor/motorola/hanoip/BoardConfigVendor.mk
 
@@ -23,11 +23,13 @@ AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
     boot \
     dtbo \
+    odm \
     product \
     system \
     system_ext \
     vbmeta \
-    vbmeta_system
+    vbmeta_system \
+    vendor
 
 # Architecture
 TARGET_ARCH := arm64
@@ -84,7 +86,10 @@ BOARD_METADATAIMAGE_PARTITION_SIZE := 16777216 # 16384 * 1024 sda22
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 115806646272 # 113092428 * 1024 sda23
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := $(BOARD_BOOTIMAGE_PARTITION_SIZE)
 
-BOARD_MOTOROLA_DYNAMIC_PARTITIONS_PARTITION_LIST := product system vendor system_ext
+BOARD_PREBUILT_ODMIMAGE := $(HANOIP_PREBUILT)/odm.img
+BOARD_PREBUILT_VENDORIMAGE := $(HANOIP_PREBUILT)/vendor.img
+
+BOARD_MOTOROLA_DYNAMIC_PARTITIONS_PARTITION_LIST := product system system_ext vendor odm
 BOARD_MOTOROLA_DYNAMIC_PARTITIONS_SIZE := 4864868352
 BOARD_SUPER_PARTITION_GROUPS := motorola_dynamic_partitions
 BOARD_SUPER_PARTITION_SIZE := 9729736704
