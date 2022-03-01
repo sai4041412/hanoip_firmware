@@ -65,7 +65,8 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    WifiResOverlayHanoip
+    WifiResOverlayHanoip \
+    FrameworkResOverlayHanoip
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
