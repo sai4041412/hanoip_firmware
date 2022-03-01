@@ -12,6 +12,9 @@
 
 DEVICE_PATH := device/motorola/hanoip
 
+# Inherit from the proprietary version
+-include vendor/motorola/hanoip/BoardConfigVendor.mk
+
 # A/B
 AB_OTA_UPDATER := true
 
